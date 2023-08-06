@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Platform } from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
@@ -11,7 +11,8 @@ export const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 14,
     flex: 1,
-    textAlignVertical: "center"
+    textAlignVertical: "center",
+    marginTop: Platform.OS === "android" ? 0 : 150
   },
   content: {
     flex: 1,
@@ -25,11 +26,19 @@ export const styles = StyleSheet.create({
     marginTop: -42,
     paddingTop: 12
   },
+  boxImage: {
+    flex: 1,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",    
+  },
   items: {
     flex: 1,
     gap: 12
   },
   image: {
-    flex: 1
+    // flex: 1,
+    width: 400,
+    height: 420,
   },
 });
