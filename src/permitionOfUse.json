@@ -1,6 +1,6 @@
 {
     "iago": {
-        "active": false
+        "active": true
     },
     "next-client": {
         "active": false
